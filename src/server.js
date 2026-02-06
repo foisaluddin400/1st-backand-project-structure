@@ -3,6 +3,10 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import productRoutes from "./routes/product.routes.js";
 import errorHandler from "./middlewares/error.middleware.js";
+import blogRoutes from "./routes/blog.routes.js";
+import authRoutes from "./routes/auth.routes.js";
+import categoryRoutes from "./routes/category.routes.js";
+import subCategoryRoutes from "./routes/subCategory.routes.js";
 import cors from "cors";
 
 dotenv.config();
@@ -16,7 +20,10 @@ app.use(express.json());
 
 // routes
 app.use("/product", productRoutes);
-
+app.use("/blog", blogRoutes);
+app.use("/auth", authRoutes);
+app.use("/category", categoryRoutes);
+app.use("/subcategory", subCategoryRoutes);
 // global error handler
 app.use(errorHandler);
 
