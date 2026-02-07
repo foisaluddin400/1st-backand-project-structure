@@ -7,6 +7,7 @@ import blogRoutes from "./routes/blog.routes.js";
 import authRoutes from "./routes/auth.routes.js";
 import categoryRoutes from "./routes/category.routes.js";
 import subCategoryRoutes from "./routes/subCategory.routes.js";
+import reviewRoutes from "./routes/review.routes.js";
 import cors from "cors";
 
 dotenv.config();
@@ -24,6 +25,8 @@ app.use("/blog", blogRoutes);
 app.use("/auth", authRoutes);
 app.use("/category", categoryRoutes);
 app.use("/subcategory", subCategoryRoutes);
+
+app.use("/review", reviewRoutes);
 // global error handler
 app.use(errorHandler);
 
