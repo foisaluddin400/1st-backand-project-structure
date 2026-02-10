@@ -2,7 +2,7 @@ import Category from "../models/category.model.js";
 import asyncHandler from "../utils/asyncHandler.js";
 import ApiError from "../utils/apiError.js";
 
-// CREATE CATEGORY - Admin only
+// CREATE CATEGORY - Admin only d
 export const createCategory = asyncHandler(async (req, res) => {
   const { name, description } = req.body;
   if (!name) throw new ApiError(400, "Category name is required");
