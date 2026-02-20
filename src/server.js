@@ -28,9 +28,16 @@ app.use("/subcategory", subCategoryRoutes);
 
 app.use("/review", reviewRoutes);
 // global error handler
+app.get("/",(req,res)=> {
+    // console.log(req.country);
+    // res.redirect(`/${req.country}`);
+    res.send("server is running . welcome .");
+});
+ 
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 3003;
+
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server running at http://192.168.0.2:${PORT}`);
 });
