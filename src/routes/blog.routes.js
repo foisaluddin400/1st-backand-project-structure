@@ -11,7 +11,7 @@ import protect, { adminOnly } from "../middlewares/auth.middleware.js";
 const router = express.Router();
 
 // GET blogs - only for logged-in users (user or admin)
-router.get("/", protect, getBlogs);
+router.get("/",  getBlogs);
 router.get("/:id", protect, getSingleBlog); 
 
 // Admin-only routes
